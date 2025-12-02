@@ -1,0 +1,199 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 94.1%; /* Light Gray #F0F0F0 */
+    --foreground: 0 0% 20%;
+    --card: 0 0% 100%; /* White #FFFFFF */
+    --card-foreground: 0 0% 20%;
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 0 0% 20%;
+    --primary: 200 100% 50%; /* Sky Blue #00A3FF */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 0 0% 100%; /* White #FFFFFF */
+    --secondary-foreground: 0 0% 20%;
+    --muted: 0 0% 96.1%; /* Lighter Gray */
+    --muted-foreground: 0 0% 45.1%; /* Gray */
+    --accent: 200 100% 50%; /* Sky Blue #00A3FF */
+    --accent-foreground: 0 0% 100%; /* White */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 100%; /* White #FFFFFF */
+    --ring: 200 100% 50%; /* Sky Blue #00A3FF */
+    --chart-1: 200 76% 61%;
+    --chart-2: 200 58% 39%;
+    --chart-3: 200 37% 24%;
+    --chart-4: 200 74% 66%;
+    --chart-5: 200 87% 67%; /* Example chart colors, adjust as needed */
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 100%; /* White for sidebar */
+    --sidebar-foreground: 0 0% 20%; /* Dark Gray for sidebar text */
+    --sidebar-primary: 200 100% 50%; /* Sky Blue */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 0 0% 94.1%; /* Light Gray for accent */
+    --sidebar-accent-foreground: 200 100% 50%;
+    --sidebar-border: 0 0% 89.8%;
+    --sidebar-ring: 200 100% 50%; /* Sky Blue */
+
+    /* VIP Theme Variables */
+    --vip-primary: 120 60% 50%; /* Light Green */
+    --vip-primary-foreground: 0 0% 100%; /* White */
+    --vip-accent: 120 60% 45%; /* Darker Light Green for accents */
+    --vip-accent-foreground: 0 0% 100%; /* White */
+    --vip-background: 0 0% 94.1%; /* Light Gray #F0F0F0 */
+    --vip-foreground: 0 0% 20%;
+    --vip-card: 0 0% 100%; /* White */
+    --vip-card-foreground: 0 0% 20%;
+    --vip-secondary: 0 0% 100%;
+    --vip-secondary-foreground: 0 0% 20%;
+    --vip-muted: 0 0% 96.1%; /* Lighter Gray */
+    --vip-muted-foreground: 0 0% 45.1%; /* Gray */
+    --vip-border: 0 0% 89.8%;
+    --vip-input: 0 0% 100%; /* White */
+    --vip-ring: 120 60% 50%; /* Light Green */
+    --vip-sidebar-background: 0 0% 100%; /* White for sidebar */
+    --vip-sidebar-foreground: 0 0% 20%;
+    --vip-sidebar-primary: 120 60% 50%; /* Light Green */
+    --vip-sidebar-primary-foreground: 0 0% 100%; /* White */
+    --vip-sidebar-accent: 0 0% 94.1%; /* Light Gray */
+    --vip-sidebar-accent-foreground: 120 60% 50%;
+    --vip-sidebar-border: 0 0% 89.8%;
+    --vip-sidebar-ring: 120 60% 50%; /* Light Green */
+
+    --avatar-border-accent: 0 0% 70%; /* Gray for avatar border */
+  }
+
+  .dark {
+    --background: 0 0% 8%; /* Almost black */
+    --foreground: 0 0% 90%; /* Light gray text */
+  
+    --card: 0 0% 12%; /* Very dark gray */
+    --card-foreground: 0 0% 90%;
+  
+    --popover: 0 0% 12%; /* Match card */
+    --popover-foreground: 0 0% 90%;
+  
+    --primary: 200 100% 60%; /* Sky blue */
+    --primary-hover: 200 100% 70%; /* Brighter on hover */
+    --primary-foreground: 0 0% 100%;
+  
+    --secondary: 0 0% 20%; /* Dark gray */
+    --secondary-foreground: 0 0% 90%;
+  
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 60%;
+  
+    --accent: 200 100% 60%; 
+    --accent-hover: 200 100% 70%;
+    --accent-foreground: 0 0% 100%;
+  
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 98%;
+  
+    --border: 0 0% 25%;
+    --input: 0 0% 12%; /* Match card background */
+    --ring: 200 100% 60%;
+  
+    --chart-1: 200 70% 50%;
+    --chart-2: 200 60% 45%;
+    --chart-3: 200 80% 55%;
+    --chart-4: 200 65% 60%;
+    --chart-5: 200 75% 55%;
+  
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 200 100% 60%;
+    --sidebar-primary-hover: 200 100% 70%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 200 100% 60%;
+    --sidebar-ring: 200 100% 60%;
+
+     /* VIP Dark Theme Variables - these will be used if .dark and .vip-theme are both present */
+     --vip-primary: 120 60% 55%; /* Light Green - Dark Mode */
+     --vip-primary-foreground: 0 0% 10%; /* Dark text for contrast on light green */
+     --vip-accent: 120 60% 50%; /* Darker Light Green for accents - Dark Mode */
+     --vip-accent-foreground: 0 0% 10%; /* Dark text */
+     --vip-background: 0 0% 5%; /* Very Dark Gray */
+     --vip-foreground: 0 0% 95%; /* Very Light Gray */
+     --vip-card: 0 0% 8%; /* Slightly Lighter Dark Gray */
+     --vip-card-foreground: 0 0% 95%; /* Very Light Gray */
+     --vip-secondary: 0 0% 10%; /* Dark Gray */
+     --vip-secondary-foreground: 0 0% 95%; /* Very Light Gray */
+     --vip-muted: 0 0% 20%;
+     --vip-muted-foreground: 0 0% 63.9%; /* Lighter Gray */
+     --vip-border: 0 0% 25%;
+     --vip-input: 0 0% 10%; /* Dark Gray */
+     --vip-ring: 120 60% 55%; /* Light Green - Dark Mode */
+     --vip-sidebar-background: 0 0% 8%; /* Slightly Lighter Dark Gray */
+     --vip-sidebar-foreground: 0 0% 98%;
+     --vip-sidebar-primary: 120 60% 55%; /* Light Green - Dark Mode */
+     --vip-sidebar-primary-foreground: 0 0% 10%; /* Dark text */
+     --vip-sidebar-accent: 0 0% 20%;
+     --vip-sidebar-accent-foreground: 120 60% 55%; /* Light Green - Dark Mode */
+     --vip-sidebar-border: 0 0% 25%;
+     --vip-sidebar-ring: 120 60% 55%; /* Light Green - Dark Mode */
+
+    --avatar-border-accent: 0 0% 50%; /* Darker Gray for avatar border in dark mode */
+  }
+
+  /* Apply VIP Theme Variables when .vip-theme class is present */
+  /* These override the default :root or .dark variables */
+  .vip-theme {
+     --background: var(--vip-background);
+     --foreground: var(--vip-foreground);
+     --card: var(--vip-card);
+     --card-foreground: var(--vip-card-foreground);
+     --popover: var(--vip-card); /* Use card color for popover */
+     --popover-foreground: var(--vip-card-foreground);
+     --primary: var(--vip-primary);
+     --primary-foreground: var(--vip-primary-foreground);
+     --secondary: var(--vip-secondary);
+     --secondary-foreground: var(--vip-secondary-foreground);
+     --muted: var(--vip-muted);
+     --muted-foreground: var(--vip-muted-foreground);
+     --accent: var(--vip-accent);
+     --accent-foreground: var(--vip-accent-foreground);
+     /* --destructive: ...; */ /* Keep default or define VIP destructive */
+     /* --destructive-foreground: ...; */
+     --border: var(--vip-border);
+     --input: var(--vip-input);
+     --ring: var(--vip-ring);
+     /* Chart colors could also be overridden if needed for VIP */
+     /* --chart-1: ...; etc. */
+     --sidebar-background: var(--vip-sidebar-background);
+     --sidebar-foreground: var(--vip-sidebar-foreground);
+     --sidebar-primary: var(--vip-sidebar-primary);
+     --sidebar-primary-foreground: var(--vip-sidebar-primary-foreground);
+     --sidebar-accent: var(--vip-sidebar-accent);
+     --sidebar-accent-foreground: var(--vip-sidebar-accent-foreground);
+     --sidebar-border: var(--vip-sidebar-border);
+     --sidebar-ring: var(--vip-sidebar-ring);
+     --avatar-border-accent: 120 70% 60%; /* Keep VIP avatar border light green */
+  }
+  .dark .vip-theme {
+    --avatar-border-accent: 120 70% 60%; /* Keep VIP avatar border light green in dark VIP */
+  }
+
+  .dark .vip-theme a:hover, .dark .vip-theme button:hover {
+    background-color: hsl(var(--vip-accent));
+    color: hsl(var(--vip-accent-foreground));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
